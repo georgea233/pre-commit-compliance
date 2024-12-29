@@ -1,0 +1,23 @@
+name: Validate Pre-commit
+
+on:
+  push:
+    branches:
+      - "*"
+      - "!main" # Don't run on main branch
+  pull_request:
+
+jobs:
+  validate-pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Pre-commit
+        run: |
+          pip install pre-commit
+
+      - name: Run Pre-commit
+        run: |
+          
