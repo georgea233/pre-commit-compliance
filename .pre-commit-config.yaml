@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    # rev: v4.4.0-invalid
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+# repos:
+# - repo: https://github.com/pre-commit/mirrors-black
+#   rev: v23.1.0
+#   hooks:
+#     - id: black
+#       language_version: python3
+
+# - repo: https://github.com/pre-commit/mirrors-isort
+#   rev: v5.10.1
+#   hooks:
+#     - id: isort
+
+# - repo: https://github.com/pre-commit/mirrors-flake8
+#   rev: v5.0.4
+#   hooks:
+#     - id: flake8
